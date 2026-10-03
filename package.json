@@ -1,0 +1,26 @@
+{
+  "name": "grainmate",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "eslint": "^9.39.5",
+    "eslint-config-prettier": "10.1.8",
+    "prettier": "3.9.9",
+    "typescript-eslint": "8.71.0"
+  },
+  "scripts": {
+    "dev:mobile": "npm run start -w @grainmate/mobile",
+    "dev:server": "npm run dev -w @grainmate/server",
+    "android": "npm run android -w @grainmate/mobile",
+    "test": "npm run test -w @grainmate/shared && npm run test -w @grainmate/server",
+    "lint": "eslint . && npm run lint -w @grainmate/mobile"
+  }
+}

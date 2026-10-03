@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: grainmate
+      POSTGRES_PASSWORD: grainmate
+      POSTGRES_DB: grainmate
+    ports:
+      - "5434:5432"
+    volumes:
+      - grainmate_pg:/var/lib/postgresql
+
+volumes:
+  grainmate_pg:
